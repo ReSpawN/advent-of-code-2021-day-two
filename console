@@ -2,13 +2,15 @@
 <?php
 // application.php
 
-require __DIR__.'/vendor/autoload.php';
+require __DIR__ . '/vendor/autoload.php';
 
-use App\Command\SolveCommand;
+use App\Command\SolvePartTwoCommand;
+use App\Command\SolvePartOneCommand;
 use Symfony\Component\Console\Application;
 
 $application = new Application();
 
-$application->add(new SolveCommand());
+$application->add(new SolvePartTwoCommand());
+$application->add(new SolvePartOneCommand());
 
 $application->run();
